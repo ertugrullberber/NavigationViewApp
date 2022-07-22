@@ -8,8 +8,25 @@
 import SwiftUI
 
 struct StateSample4: View {
+    @State var name : String = ""
+    @State var cities : [String] = ["","","","","","",""]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            
+            TextField("Name", text: $name)
+                .padding()
+            
+            
+            Button("Add"){
+                cities.append(name)
+                name = ""
+            }
+            
+            List(cities, id: \.self){ item in
+                Text(item)
+            }
+        }
+        
     }
 }
 

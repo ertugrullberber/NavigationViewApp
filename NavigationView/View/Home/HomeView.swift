@@ -15,11 +15,11 @@ struct HomeView: View {
             
             NavigationLink(destination: SupplierListView())  {
                 Text("Go to Supplier")
-            }
+            }.padding()
             
             NavigationLink(destination: ProfileView()) {
                 Image(systemName: "house")
-            }
+            }.padding()
         }.navigationTitle("Home")
             .navigationBarTitleDisplayMode(.inline)
             
